@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from './functions.js';
+import { calculator, capitalize, reverseString } from './functions.js';
 
 // Capitalize
 describe('capitalize', () => {
@@ -27,3 +27,17 @@ describe('reverseString', () => {
 });
 
 // Calculator
+describe('calculator', () => {
+    test('add', () => {
+        expect(calculator.add(1, 2)).toBe(3);
+    });
+    test('subtract', () => {
+        expect(calculator.subtract(5, 2)).toBe(3);
+    });
+    test('multiply', () => {
+        expect(calculator.multiply(3, 4)).toBe(12);
+    });
+    test('divide', () => {
+        expect(calculator.divide(8, 2)).toBe(4);
+    });
+});
