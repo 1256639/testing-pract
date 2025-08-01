@@ -10,3 +10,5 @@ export function capitalize(string) {
 export function reverseString(string) {
     return string.split('').reverse().join('');
 }
+
+// Calculator
