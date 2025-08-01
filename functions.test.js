@@ -1,4 +1,4 @@
-import { calculator, capitalize, reverseString } from './functions.js';
+import { caesarCipher, calculator, capitalize, reverseString } from './functions.js';
 
 // Capitalize
 describe('capitalize', () => {
@@ -40,4 +40,20 @@ describe('calculator', () => {
     test('divide', () => {
         expect(calculator.divide(8, 2)).toBe(4);
     });
+});
+
+// Caesar cipher
+describe('caesarCipher', () => {
+  test('shifts lowercase letters and wraps from z to a', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+  });
+  test('preserves case', () => {
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+  });
+  test('keeps punctuation and spaces unchanged', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+  });
+  test('works with negative shift', () => {
+    expect(caesarCipher('abc', -3)).toBe('xyz');
+  });
 });
