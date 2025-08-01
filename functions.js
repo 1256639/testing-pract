@@ -31,3 +31,12 @@ export function caesarCipher(str, shift) {
     }
   }).join('');
 }
+
+// Ananlyze array
+export function analyzeArray(arr) {
+  const length = arr.length;
+  const average = arr.reduce((a, b) => a + b, 0) / length;
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  return { average, min, max, length };
+}
